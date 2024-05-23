@@ -1,6 +1,6 @@
 # HAMD E-Commerce Web App---Reactjs & Firebase
-
-This web-app is created using reactjs frame-work, tailwind css and firebase for backend services  
+@https://hamd-ecom.web.app/  </br>
+This web-app is created using Reactjs frame-work, Tailwind CSS and Firebase for backend services  
 # AMAZING FEATURES:
 - Sleek and Modern UI/UX: Enjoy a visually stunning and user-friendly shopping APP.
 - Responsive Across All Devices: Whether on a desktop, tablet, or smartphone, enjoy a seamless browsing experience.
