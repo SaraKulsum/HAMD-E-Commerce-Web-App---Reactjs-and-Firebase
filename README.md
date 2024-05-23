@@ -1,8 +1,13 @@
-# React + Vite
+# HAMD E-Commerce Web App---Reactjs & Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This web-app is created using reactjs frame-work, tailwind css and firebase for backend services  
+# AMAZING FEATURES:
+- Sleek and Modern UI/UX: Enjoy a visually stunning and user-friendly shopping APP.
+- Responsive Across All Devices: Whether on a desktop, tablet, or smartphone, enjoy a seamless browsing experience.
+- Users Authenticate by E-mails
+- Razorpay payment gateway integretion
+- Admin dashborad (that shows total products, total orders, total users....with actions like edit/delete)
+- User dashboard (that show user name & logo ....with complete order details)
+- Multiple Filtering System (CATEGORIES, PRICE-RANGES, COLORS, NEWLY ADDED, PRICES(low - high) & Prices(high - low).... That could be used at a time!)
+- Differnt Grid Views
+- Smooth Animations
