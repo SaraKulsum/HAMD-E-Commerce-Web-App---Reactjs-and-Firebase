@@ -1,0 +1,36 @@
+
+
+/*---HOVER EFFECT ON GRID BTNS---*/
+  .GridViewCols2:hover .gridBar2, .GridViewCols3:hover .gridBar3, .GridViewCols4:hover .gridBar4 {
+    background-color: black;
+  }
+ 
+/*---EFFECT ONCLICK GRID BTNS---*/
+  .gridBar2[data-status='active'], .gridBar3[data-status='active'], .gridBar4[data-status='active']  {
+    background-color: black;
+  }
+  .GridViewCols2[data-status='active'], .GridViewCols3[data-status='active'], .GridViewCols4[data-status='active']{
+    border: 1px solid black;
+  }
+/*---display grid view on class selection---*/
+.productContainer_grid_View_2_cols{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.productContainer_grid_View_3_cols{
+   display: grid;
+   gap: 20px;
+   grid-template-columns: 1fr 1fr 1fr;
+  
+}
+.productContainer_grid_View_4_cols{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
+
+}
+  
+ 
