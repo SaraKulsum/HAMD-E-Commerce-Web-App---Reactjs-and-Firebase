@@ -74,9 +74,8 @@ function NavBar() {
     let dropDownEle = document.querySelector(".dropDown-content");
     let dropDownState = dropDownEle.getAttribute("data-theme");
     if ((prevClickedAddress == address) & (dropDownState == "active")) {
-      
-        /*remove underline when dropdown is closed*/
-      
+      /*remove underline when dropdown is closed*/
+
       document.querySelector(`.${prevClickedAddress}Underline`).style =
         "display:none;";
 
@@ -124,27 +123,35 @@ function NavBar() {
         : navigate("/AdminDashBoard");
     }
   };
+  /*check the user is logged in*/
+  const checkIsloggedIn=()=>{
+    if(user === null){
+      navigate("/Signup");
+    }else{
+      navigate("/cart");
+    }
+  }
 
- 
+  const closeOptionBox = () => {
+    let dropDownEle = document.querySelector(".dropDown-content");
+    let dropDownState = dropDownEle.getAttribute("data-theme");
 
- const closeOptionBox = () => {
-    
-    let dropDownEle = document.querySelector('.dropDown-content');
-    let dropDownState = dropDownEle.getAttribute('data-theme');
-   
-        dropDownEle.style = 'display:none'
-        document.querySelector('.dropDown-content').setAttribute('data-theme' , 'inActive');    
-        document.querySelector('.contactUnderline').style = "display:none;"
-        document.querySelector('.menCategoryUnderline').style = "display:none;"
-        document.querySelector('.womenCategoryUnderline').style = "display:none;"
-
-         
+    dropDownEle.style = "display:none";
+    document
+      .querySelector(".dropDown-content")
+      .setAttribute("data-theme", "inActive");
+    document.querySelector(".contactUnderline").style = "display:none;";
+    document.querySelector(".menCategoryUnderline").style = "display:none;";
+    document.querySelector(".womenCategoryUnderline").style = "display:none;";
   };
 
   return (
-    <header >
-      <div  className="navContainer  z-[100] p-3 w-[100vw] bg-transparent backdrop-blur-sm fixed shadow-md block top-0">
-        <div onClick={()=>closeOptionBox} className="flex justify-between items-center mx-3">
+    <header>
+      <div className="navContainer  z-[100] p-3 w-[100vw] bg-transparent backdrop-blur-sm fixed shadow-md block top-0">
+        <div
+          onClick={() => closeOptionBox}
+          className="flex justify-between items-center mx-3"
+        >
           <a href="/">
             <span className="font-[robotic] font-bold text-[30px] text-center ">
               HAMD
@@ -179,7 +186,9 @@ function NavBar() {
 
               <li
                 id="navItem"
-                onClick={() =>{ handleClick("contact"), closeOptionBox()}}
+                onClick={() => {
+                  handleClick("contact"), closeOptionBox();
+                }}
                 className="category relative hover:cursor-pointer block"
               >
                 <a href="#footer">CONTACT</a>
@@ -195,12 +204,14 @@ function NavBar() {
               </li>
 
               <li id="cart" className="navItem  ">
-                <a href="/cart" className="text-xl flex items-center">
+                <span className="text-xl flex items-center hover:cursor-pointer"
+                onClick={checkIsloggedIn}
+                >
                   <PiBag />
                   <span className="bg-black flex items-center  text-white text-xs rounded-full px-[4px]">
                     {totalCartItems}
                   </span>
-                </a>
+                </span>
               </li>
             </ul>
             {isMenuOpn && (
@@ -217,7 +228,9 @@ function NavBar() {
                   {menCategoryData.map((ele, index) => (
                     <li
                       key={index}
-                      onClick={() => {navigate(ele.link), closeOptionBox()}}
+                      onClick={() => {
+                        navigate(ele.link), closeOptionBox();
+                      }}
                       className="l1 hover:font-[600] my-2 uppercase"
                     >
                       <span>{ele.name}</span>
@@ -228,7 +241,9 @@ function NavBar() {
                   {womenCategoryData.map((ele, index) => (
                     <li
                       key={index}
-                      onClick={() => {navigate(ele.link),closeOptionBox()}}
+                      onClick={() => {
+                        navigate(ele.link), closeOptionBox();
+                      }}
                       className="l1 hover:font-[600] my-2 uppercase"
                     >
                       <span>{ele.name}</span>
